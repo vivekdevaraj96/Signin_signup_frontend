@@ -1,6 +1,6 @@
-/signup for signup page
+https://signin-signup-vivek.netlify.app/signup for signup page
 
-/signin for signin page
+https://signin-signup-vivek.netlify.app//signin for signin page
 
 /after signing in using the credentials , It will directs u to the Userdetail page
 
