@@ -29,7 +29,7 @@ const Signup = () => {
       })
     }).then((res)=>res.json())
     .then((data)=>{console.log(data);
-    alert( `${data.message}, 😄 Now You can Sign in`);
+    alert( data.message);
     window.location.href="./signin"})
     
   }
