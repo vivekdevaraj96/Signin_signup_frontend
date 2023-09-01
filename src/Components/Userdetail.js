@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Button } from 'react-bootstrap';
 
 const Userdetail = () => {
     let [fname, setfname]=useState("")
@@ -19,10 +20,16 @@ const Userdetail = () => {
         setfname(data.data.fname)
     })
       }, []);
+
+     var logout=()=>{
+        window.localStorage.clear()
+        window.location.href="./signin"
+      }
    
   return (
     <div>
-        <h1>Hi {fname} , You are successfully Logged in</h1>
+        <h1>Hi {fname} , You are successfully Logged in</h1><br/>
+        <Button variant="primary" onClick={()=>logout()}>Log out</Button>
     </div>
   )
 }

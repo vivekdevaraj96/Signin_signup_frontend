@@ -27,7 +27,10 @@ const Signin = () => {
       if(data.status==="ok"){
         alert("login successfull")
         window.localStorage.setItem("token", data.data);
+        window.localStorage.setItem("Loggedin", true);
         window.location.href="./Userdetail"
+      }else{
+        alert("invalid credentials")
       }
     })
 }
@@ -48,6 +51,9 @@ const Signin = () => {
         <Button variant="primary" type="submit">Sign in</Button>
         <p className="forgot-password text-right">
           new Users <a href="/signup">sign up</a>
+        </p>
+        <p className="forgot-password text-right">
+          <a href="/forgetpassword">Forget password</a>
         </p>
       </Form>
     </div>
